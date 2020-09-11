@@ -1,0 +1,82 @@
+{
+    "label": "Acq Enumerator Submitter",
+    "submission_type": "iteration",
+    "enable_dedup": false,
+    "params" : [
+    {
+      "name": "request_id",
+      "from": "submitter",
+      "type": "text",
+      "placeholder":"request id"
+    },
+    {
+      "name": "geojson_polygon",
+      "from": "submitter",
+      "type": "region",
+      "placeholder": "spatial bounds as a geojson"
+    },
+    {
+      "name": "starttime",
+      "from": "submitter",
+      "type": "text",
+      "placeholder":"beginning of the temporal range"
+    },
+    {
+      "name": "endtime",
+      "from": "submitter",
+      "type": "text",
+      "placeholder":"end of the temporal range"
+    },
+    {
+      "name": "track_numbers",
+      "from": "submitter",
+      "optional": true,
+      "placeholder": "Comma-separated track numbers. Optional."
+    },
+    {
+      "name": "enumeration_job_name",
+      "from": "submitter",
+      "type": "text",
+      "default": "job-request-s1gunw-acq_enumerator-location"
+    },
+    {
+      "name": "enumeration_job_version",
+      "from": "submitter",
+      "type": "jobspec_version",
+      "version_regex": "job-standard_product-s1gunw-acq_enumerator"
+    },
+    {
+      "name": "enumerator_queue",
+      "from": "submitter",
+      "default": "aria-standard_product-enumerator",
+      "optional": true
+    },
+    {
+      "name": "enableDedup",
+      "from": "submitter",
+      "type": "boolean",
+      "default": "true"
+    },
+    { 
+      "name": "minMatch",
+      "from": "submitter",
+      "type": "number",
+      "lambda": "lambda x: int(x)",
+      "default": "2"
+    },
+    { 
+      "name": "acquisition_version",
+      "from": "submitter",
+      "type": "text",
+      "default": "v2.0" 
+    },
+    {
+      "name": "skipDays",
+      "from": "submitter",
+      "type": "number",
+      "lambda": "lambda x: int(x)",
+      "default": "0",
+      "optional": true
+    }
+    ]
+}
