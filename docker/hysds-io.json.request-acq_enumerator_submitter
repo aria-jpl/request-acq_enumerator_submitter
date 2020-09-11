@@ -77,6 +77,12 @@
       "lambda": "lambda x: int(x)",
       "default": "0",
       "optional": true
+    },
+    {
+      "name": "machine_tags",
+      "from": "submitter",
+      "type": "text",
+      "optional": true
     }
     ]
 }
